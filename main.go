@@ -5,12 +5,12 @@ import "log"
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		log.Println("Hello world received a request.")
+		log.Println("HelloWorld endpoint received a request.")
 		w.Write([]byte("Hello, world!"))
 	})
 
 	http.HandleFunc("/bye", func(w http.ResponseWriter, r *http.Request) {
-		log.Println("Panic received a request.")
+		log.Println("Goodbye endpoint received a request.")
 		w.Write([]byte("Goodbye, fellows!"))
 	})
 
